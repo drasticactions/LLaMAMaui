@@ -1,0 +1,3 @@
+[submodule "llama.cpp.runtimes"]
+	path = llama.cpp.runtimes
+	url = git@github.com:drasticactions/llama.cpp.runtimes.git

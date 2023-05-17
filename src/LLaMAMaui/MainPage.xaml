@@ -8,7 +8,7 @@
             <Button Grid.Column="1" Text="Select Model" Command="{Binding PickModelCommand}"/>
         </Grid>
         <Entry Margin="5" Grid.Row="1" Placeholder="Prompt..." Text="{Binding Prompt}"/>
-        <Button Margin="5" Grid.Row="2" Text="Generate" Command="{Binding GenerateCommand}"/>
+        <Button Margin="5" Grid.Row="2" BackgroundColor="White"  Text="Generate" Command="{Binding GenerateCommand}"/>
         <Editor Margin="5" IsReadOnly="True" Grid.Row="3" Text="{Binding GeneratedText}"/>
         <Button Margin="5" Grid.Row="4" BackgroundColor="Red" TextColor="White" Text="Stop" Command="{Binding StopCommand}"/>
     </Grid>

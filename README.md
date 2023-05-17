@@ -13,3 +13,7 @@ Some models can be found below.
 - [TheBloke on Hugging Face](https://huggingface.co/TheBloke)
 
 Download a LLaMA model, pick it, enter a prompt, and hit "Generate".
+
+## NOTE
+
+In order to run this on macOS/iPhone, you must match the architecture you're running on your system. For example, if you're on an M1, you must use the arm64 runtime identifiers (Ex: `maccatalyst-arm64`). If you don't, your application will crash.

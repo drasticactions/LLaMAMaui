@@ -9,6 +9,13 @@ public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
     {
+#if MACCATALYST
+        Microsoft.Maui.Handlers.ButtonHandler.Mapper.AppendToMapping("ButtonChange", (handler, view) =>
+        {
+            handler.PlatformView.PreferredBehavioralStyle = UIKit.UIBehavioralStyle.Pad;
+        });
+#endif
+
         var builder = MauiApp.CreateBuilder();
 
         builder.Services
