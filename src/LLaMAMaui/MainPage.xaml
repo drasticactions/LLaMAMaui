@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LLaMAMaui.MainPage">
+    <Grid RowSpacing="5" RowDefinitions="Auto, Auto, Auto, *, Auto">
+        <Grid Margin="5" ColumnSpacing="5" ColumnDefinitions="*, Auto">
+            <Entry IsEnabled="False" Placeholder="Model..." Text="{Binding ModelPath}"/>
+            <Button Grid.Column="1" Text="Select Model" Command="{Binding PickModelCommand}"/>
+        </Grid>
+        <Entry Margin="5" Grid.Row="1" Placeholder="Prompt..." Text="{Binding Prompt}"/>
+        <Button Margin="5" Grid.Row="2" Text="Generate" Command="{Binding GenerateCommand}"/>
+        <Editor Margin="5" IsReadOnly="True" Grid.Row="3" Text="{Binding GeneratedText}"/>
+        <Button Margin="5" Grid.Row="4" BackgroundColor="Red" TextColor="White" Text="Stop" Command="{Binding StopCommand}"/>
+    </Grid>
+</ContentPage>
